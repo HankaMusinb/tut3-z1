@@ -4,10 +4,12 @@ public  class FiksniBroj extends TelefonskiBroj {
     private Grad grad;
 
 
-    public FiksniBroj( Grad grad, String broj1) {
-
+    public FiksniBroj( Grad grad, String broj) {
+        if(grad.equals(Grad.SARAJEVO)){
+            throw new izuzetak("Moj izuzetak");
+        }
         this.grad = grad;
-        this.broj = broj1;
+        this.broj = broj;
     }
 
     public Grad getGrad() {
